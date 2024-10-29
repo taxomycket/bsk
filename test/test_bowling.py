@@ -30,9 +30,10 @@ class TestBowlingGame(unittest.TestCase):
         game.add_frame(Frame(3, 3))
         game.add_frame(Frame(4, 5))
         game.add_frame(Frame(8, 1))
-        game.add_frame(Frame(2, 6))
+        f = Frame(2, 6)
+        game.add_frame(f)
 
 
 
-        self.assertEqual(f, game.get_frame_at(0))
+        self.assertEqual(f, game.get_frame_at(9))
 
