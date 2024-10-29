@@ -43,7 +43,6 @@ class TestBowlingGame(unittest.TestCase):
         game.add_frame(Frame(7, 2))
         game.add_frame(Frame(3, 6))
         game.add_frame(Frame(4, 4))
-
         game.add_frame(Frame(5, 3))
 
         game.add_frame(Frame(3, 3))
@@ -51,7 +50,4 @@ class TestBowlingGame(unittest.TestCase):
         game.add_frame(Frame(8, 1))
         f = Frame(2, 6)
         game.add_frame(f)
-
-
-
-        self.assertRaises(f, game.get_frame_at, Frame(1,1))
+        self.assertRaises(BowlingError, game.add_frame, Frame(1,1))
